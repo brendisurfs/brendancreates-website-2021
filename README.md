@@ -17,3 +17,7 @@ ThreeJS
 -   [ ] add more of my 3D creations for interactivity.
 -   [ ] add custom shaders.
 -   [ ] update info on pages.
+
+### example
+
+![Alt text](./public/progress.png)
