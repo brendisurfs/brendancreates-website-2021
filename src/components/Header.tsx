@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 //	|
 //	v
 import { RouteItem } from "../App";
+import { ColorModeSwitcher } from "./ColorModeSwitcher";
 
 const spin = {
 	transform: "rotate(-90deg)",
@@ -38,16 +39,24 @@ function Header({ routes }: { routes: RouteItem[] }) {
 				zIndex={1}
 				className="rotated-stack"
 				position="fixed"
-				right={-24}
-				top={32}
+				right={-28}
+				top={36}
 				style={spin}
 				m={2}
 			>
 				{routes.map((route) => (
-					<LinkBox textStyle="link" _hover={{ color: "black" }} p={2}>
+					<LinkBox
+						textStyle="link"
+						_hover={{
+							color: "black",
+							textDecoration: "line-through",
+						}}
+						p={2}
+					>
 						<Link to={route.path}>{route.name}</Link>
 					</LinkBox>
 				))}
+				<ColorModeSwitcher />
 			</HStack>
 		</Flex>
 	);

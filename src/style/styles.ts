@@ -1,11 +1,12 @@
-import { extendTheme, ThemeConfig } from "@chakra-ui/react";
-import defaultTheme from "@chakra-ui/theme";
+import { extendTheme } from "@chakra-ui/react";
 
 export const theme = extendTheme({
-	...defaultTheme,
-
+	styles: {
+		body: {
+			background: "var(--chakra-colors-whiteAlpha-900)",
+		},
+	},
 	colors: {
-		...defaultTheme.colors,
 		brand: {
 			100: "blue",
 		},
@@ -26,9 +27,14 @@ export const theme = extendTheme({
 			fontSize: "20px",
 		},
 		linkHover: {
-			color: "black",
-			fontWeight: "semibold",
-			fontSize: "20px",
+			textDecoration: "line-through",
 		},
+	},
+});
+
+export const lightTheme = extendTheme({
+	config: {
+		useSystemColorMode: false,
+		initialColorMode: "light",
 	},
 });
