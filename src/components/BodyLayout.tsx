@@ -18,9 +18,9 @@ function BodyLayout({ pageTitle, children, zIndex }: IBodyLayout) {
 			zIndex={zIndex ? zIndex : 0}
 		>
 			<VStack>
-				<Box p={2} textStyle="h2B">
+				{/* <Box p={2} textStyle="h2B">
 					{pageTitle}
-				</Box>
+				</Box> */}
 				{children}
 			</VStack>
 		</Center>
